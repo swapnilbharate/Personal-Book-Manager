@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter);
+}
+
+@layer base {
+  :root {
+    --background: #f8fafc;
+    --foreground: #0f172a;
+  }
+  
+  .dark {
+    --background: #020617; /* Ultra dark slate for better contrast */
+    --foreground: #f8fafc;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/40 backdrop-blur-lg border border-white/40 shadow-[0_4px_30px_rgba(0,0,0,0.05)] dark:bg-slate-900/40 dark:border-indigo-500/10 dark:shadow-[0_4px_30px_rgba(0,0,0,0.2)];
+  }
+  
+  .glass-card {
+    @apply bg-white/60 backdrop-blur-xl border border-white/50 shadow-xl dark:bg-slate-900/60 dark:border-indigo-500/20 dark:shadow-2xl;
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  /* Midnight Indigo Gradient - Light Mode */
+  background-image: 
+    radial-gradient(at 0% 0%, hsla(240, 100%, 95%, 1) 0, transparent 50%), 
+    radial-gradient(at 100% 0%, hsla(330, 100%, 95%, 1) 0, transparent 50%), 
+    radial-gradient(at 50% 100%, hsla(280, 100%, 95%, 1) 0, transparent 50%);
+  background-attachment: fixed;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark body {
+  /* Midnight Indigo Gradient - Dark Mode */
+  background-image: 
+    radial-gradient(at 0% 0%, hsla(253, 50%, 8%, 1) 0, transparent 50%), 
+    radial-gradient(at 100% 0%, hsla(339, 49%, 12%, 1) 0, transparent 50%), 
+    radial-gradient(at 50% 100%, hsla(280, 50%, 10%, 1) 0, transparent 50%);
+}
