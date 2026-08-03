@@ -6,6 +6,8 @@
 
 <img width="1919" height="852" alt="Landing Page" src="https://github.com/user-attachments/assets/13910da2-5ef6-4da4-8e48-4c77b427598e" />
 
+<br/>
+
 <img width="1919" height="867" alt="Dashboard" src="https://github.com/user-attachments/assets/e1a36581-6e79-40b6-bd48-7ded7a3218e0" />
 
 ## ✨ Project Overview
@@ -150,27 +152,6 @@ npm run dev
 | DELETE | `/api/v1/books/:id` | Delete book | Private |
 | GET | `/api/v1/books/stats/dashboard`| Get dashboard analytics | Private |
 
-## 🚀 Deployment Guide
-
-### Backend (Render / Heroku)
-1. Push your code to GitHub.
-2. Create a new Web Service on Render.
-3. Connect your repository and set the Root Directory to `backend`.
-4. Set Build Command: `npm install` and Start Command: `node server.js`.
-5. Add Environment Variables (MONGO_URI from MongoDB Atlas, JWT_SECRET, etc.).
-
-### Frontend (Vercel)
-1. Import your GitHub repository into Vercel.
-2. Set the Root Directory to `frontend`.
-3. Vercel will automatically detect Next.js settings.
-4. Add Environment Variable `NEXT_PUBLIC_API_URL` pointing to your deployed backend URL.
-5. Click Deploy.
-
-## 🔮 Future Enhancements
-- Export Book List as PDF and CSV.
-- Import Books via JSON/CSV.
-- Social features: Share your reading list with friends.
-- Google Books API integration to auto-fetch covers and descriptions via ISBN.
 
 ---
 Built with ❤️ for readers.
