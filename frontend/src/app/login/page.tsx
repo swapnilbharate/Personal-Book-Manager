@@ -1,8 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { useForm } from 'react-form-hook'; // Wait, let's just use regular react-hook-form
-import { useForm as useRHForm } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -14,7 +13,7 @@ import api from '@/lib/axios';
 import { toast } from 'react-toastify';
 
 export default function LoginPage() {
-  const { register, handleSubmit, formState: { errors } } = useRHForm();
+  const { register, handleSubmit, formState: { errors } } = useForm();
   const [isLoading, setIsLoading] = useState(false);
   const { login } = useAuth();
   const router = useRouter();
