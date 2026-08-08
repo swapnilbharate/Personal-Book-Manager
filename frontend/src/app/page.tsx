@@ -7,6 +7,7 @@ import { BookOpen, Sparkles, TrendingUp, ShieldCheck } from 'lucide-react';
 import { useAuth } from '@/context/AuthContext';
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
+import Navbar from '@/components/layout/Navbar';
 
 export default function Home() {
   const { user, loading } = useAuth();
@@ -21,8 +22,10 @@ export default function Home() {
   if (loading) return null; // Or a nice splash screen
 
   return (
-    <main className="flex-1 flex flex-col items-center justify-center p-6 sm:p-12 text-center">
-      <motion.div
+    <>
+      <Navbar />
+      <main className="flex-1 flex flex-col items-center justify-center pt-24 pb-12 px-6 sm:px-12 text-center min-h-screen">
+        <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -40,19 +43,6 @@ export default function Home() {
         <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
           Elevate your reading habit. Track progress, curate collections, and visualize your literary journey in a stunning, distraction-free environment.
         </p>
-
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-          <Link href="/register">
-            <Button size="lg" className="w-full sm:w-auto text-lg px-8 rounded-2xl bg-indigo-600 hover:bg-indigo-700 hover:scale-105 transition-transform shadow-lg shadow-indigo-500/25">
-              Start Reading
-            </Button>
-          </Link>
-          <Link href="/login">
-            <Button size="lg" variant="glass" className="w-full sm:w-auto text-lg px-8 rounded-2xl hover:scale-105 transition-transform">
-              Welcome Back
-            </Button>
-          </Link>
-        </div>
 
         <motion.div 
           initial={{ opacity: 0, y: 40 }}
@@ -77,7 +67,8 @@ export default function Home() {
           />
         </motion.div>
       </motion.div>
-    </main>
+      </main>
+    </>
   );
 }
 

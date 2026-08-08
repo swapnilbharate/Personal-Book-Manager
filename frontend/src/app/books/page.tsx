@@ -137,8 +137,8 @@ export default function BooksPage() {
                 transition={{ duration: 0.2 }}
                 className="glass-card rounded-3xl overflow-hidden group flex flex-col h-full"
               >
-                <div className="p-5 flex-1 flex gap-4">
-                  <div className="w-24 h-36 flex-shrink-0 bg-gray-200 dark:bg-gray-700 rounded-xl overflow-hidden shadow-md relative">
+                <div className="p-4 sm:p-5 flex-1 flex gap-3 sm:gap-4">
+                  <div className="w-20 sm:w-24 h-28 sm:h-36 flex-shrink-0 bg-gray-200 dark:bg-gray-700 rounded-xl overflow-hidden shadow-md relative">
                     {book.coverImage ? (
                       <img src={book.coverImage} alt={book.title} className="w-full h-full object-cover" />
                     ) : (
@@ -184,7 +184,7 @@ export default function BooksPage() {
                   </div>
                 </div>
                 
-                <div className="bg-gray-50/50 dark:bg-black/20 px-5 py-3 border-t border-gray-100 dark:border-white/5 flex justify-end gap-2">
+                <div className="bg-gray-50/50 dark:bg-black/20 px-4 sm:px-5 py-3 border-t border-gray-100 dark:border-white/5 flex justify-end gap-2">
                   <Button variant="ghost" size="sm" onClick={() => handleEdit(book)} className="h-8 text-xs">
                     <Edit2 className="w-3 h-3 mr-1" /> Edit
                   </Button>

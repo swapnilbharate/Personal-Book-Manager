@@ -85,7 +85,7 @@ export default function DashboardPage() {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Pie Chart */}
-          <div className="glass-card p-6 rounded-3xl lg:col-span-1">
+          <div className="glass-card p-4 sm:p-6 rounded-3xl lg:col-span-1">
             <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">Reading Status</h3>
             <div className="h-64">
               {pieData.length > 0 ? (
@@ -127,7 +127,7 @@ export default function DashboardPage() {
           </div>
 
           {/* Bar Chart (Top Genres) */}
-          <div className="glass-card p-6 rounded-3xl lg:col-span-2">
+          <div className="glass-card p-4 sm:p-6 rounded-3xl lg:col-span-2">
             <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">Top Genres</h3>
             <div className="h-64">
               {stats?.topGenres && stats.topGenres.length > 0 ? (
@@ -158,7 +158,7 @@ function StatCard({ title, value, icon, bg }: { title: string, value: number, ic
     <motion.div 
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="glass-card p-6 rounded-3xl flex items-center gap-4"
+      className="glass-card p-4 sm:p-6 rounded-3xl flex items-center gap-4"
     >
       <div className={`w-12 h-12 rounded-2xl flex items-center justify-center ${bg}`}>
         {icon}
