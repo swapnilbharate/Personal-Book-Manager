@@ -11,7 +11,6 @@ import { Mail, Lock, BookOpen } from 'lucide-react';
 import { useAuth } from '@/context/AuthContext';
 import api from '@/lib/axios';
 import { toast } from 'react-toastify';
-import Navbar from '@/components/layout/Navbar';
 
 export default function LoginPage() {
   const { register, handleSubmit, formState: { errors } } = useForm();
@@ -36,10 +35,8 @@ export default function LoginPage() {
   };
 
   return (
-    <>
-      <Navbar />
-      <div className="flex min-h-screen items-center justify-center p-4 pt-20">
-        <motion.div 
+    <div className="flex min-h-screen items-center justify-center p-4">
+      <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
@@ -88,7 +85,6 @@ export default function LoginPage() {
           </Link>
         </p>
       </motion.div>
-      </div>
-    </>
+    </div>
   );
 }
