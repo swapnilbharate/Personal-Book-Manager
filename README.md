@@ -156,3 +156,5 @@ npm run dev
 
 ---
 Built with ❤️ for readers.
+
+<!-- streak update: 2026-10-21 -->
